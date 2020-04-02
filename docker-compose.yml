@@ -1,0 +1,23 @@
+version: "3.5"
+
+services:
+  python:
+    image: "python:${PYTHON_TAG}"
+    container_name: "${PROJECT_NAME}_python"
+    hostname: python
+    stop_grace_period: 60s
+    build: 
+      dockerfile: Dockerfile
+      context: ./python
+      args:
+        BASE_IMAGE: python:${PYTHON_TAG}
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./python:/scripts
+
+networks:
+  default:
+      name: image_classification_examples
