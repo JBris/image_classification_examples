@@ -3,6 +3,7 @@
 # Source: https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
 # Author: Francois Chollet - https://twitter.com/fchollet
 # Data: https://www.kaggle.com/c/dogs-vs-cats/data
+# See https://gist.github.com/fchollet/0830affa1f7f19fd47b06d4cf89ed44d
 
 import os
 from keras.preprocessing.image import ImageDataGenerator
