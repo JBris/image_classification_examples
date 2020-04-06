@@ -2,14 +2,14 @@ ARG TIDYVERSE_TAG
 
 FROM rocker/tidyverse:$TIDYVERSE_TAG
 
-RUN install2.r --error \
-    --deps TRUE \     
-    reticulate 
+RUN apt-get update && apt-get install -y libpython3-dev python3-venv python3-pip libjpeg-dev
 
 RUN installGithub.r rstudio/keras@09de409ece8b9a47a4f915ee7397c486fc1e9e91 
 
-RUN Rscript -e 'reticulate::install_miniconda(path = "/opt/miniconda")'
+ENV PYTHON_PACKAGES="\
+    numpy \
+    pandas \
+    tensorflow==2.0 \
+" 
 
-RUN chmod +x -R /opt/miniconda
-
-RUN apt-get update && apt-get install -y libpython-dev libpython3-dev
+RUN pip3 install --upgrade pip && pip3 install --no-cache-dir $PYTHON_PACKAGES

@@ -6,3 +6,6 @@
 **/.virtualenvs
 **/.conda
 **/.bash*
+**/.keras
+**/.python_history
+**/core
