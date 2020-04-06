@@ -1,0 +1,7 @@
+**/kitematic
+**/.rstudio
+**/.cache
+**/.local
+**/.virtualenvs
+**/.conda
+**/.bash*
