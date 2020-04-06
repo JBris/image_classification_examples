@@ -11,3 +11,5 @@ RUN installGithub.r rstudio/keras@09de409ece8b9a47a4f915ee7397c486fc1e9e91
 RUN Rscript -e 'reticulate::install_miniconda(path = "/opt/miniconda")'
 
 RUN chmod +x -R /opt/miniconda
+
+RUN apt-get update && apt-get install -y libpython-dev libpython3-dev
