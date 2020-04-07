@@ -10,6 +10,7 @@ ENV PYTHON_PACKAGES="\
     numpy \
     pandas \
     tensorflow==2.0 \
+    pillow \
 " 
 
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir $PYTHON_PACKAGES

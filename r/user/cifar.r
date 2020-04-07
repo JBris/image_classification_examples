@@ -1,3 +1,6 @@
+# Source: https://towardsdatascience.com/how-to-implement-deep-learning-in-r-using-keras-and-tensorflow-82d135ae4889
+# Author: Anish Singh Walia - https://towardsdatascience.com/@anishsingh20
+
 # loading keras library
 library(keras)
 
