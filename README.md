@@ -30,6 +30,6 @@ Additional examples are written in R. From the [.env.example file](.env.example)
 
 As the [docker-compose.yml](docker-compose.yml) file shows, this repo employs the [rocker/tidyverse image](https://hub.docker.com/r/rocker/tidyverse) which already includes the tidyverse collection and RStudio server.  
 
-If you opt to use Docker, you can view the [Makefile](Makefile) for relevant Docker commands. The `make renter` command will allow users to execute shell commands within the R container. The `make rrun` command will run an R script. For example, `make rrun s=fashion` will run [$R_STUDIO_USER/fashion.r](r/user/fashion.r)
+If you opt to use Docker, you can view the [Makefile](Makefile) for relevant Docker commands. The `make renter` command will allow users to execute shell commands within the R container. The `make rrun` command will run an R script. For example, `make rrun s=bitcoin_anomalies` will run [$R_STUDIO_USER/fashion.r](r/user/fashion.r)
 
-Example anomaly detection algorithms can be found in the [r directory](r). You can execute various r scripts to analyze and model the data. 
+Example image classification algorithms can be found in the [r directory](r). You can execute various r scripts to analyze and model the data. 
